@@ -22,6 +22,13 @@ const contacts = [
         "name": "Tyler McGinnis",
         "handle": "tylermcginnis",
         "avatarURL": "http://localhost:5001/tyler.jpg"
+    },
+
+    {
+        "id": "tathagat",
+        "name": "Tathagat Thapliyal",
+        "handle": "tathagat2006",
+        "avatarURL": "http://localhost:5001/tathagat.jpg"
     }
 ];
 
