@@ -1,6 +1,8 @@
 import React , {Component} from 'react'
 //you can ignore the above line as you are using the stateless functional component.
 
+import PropTypes from 'prop-types';
+
 //you can also make function instead of using class's render method
 function ListContacts(props) {
     return(
@@ -26,6 +28,12 @@ function ListContacts(props) {
                 ))}
             </ol>
     )
+}
+
+ListContacts.protoTypes = {
+    contacts: PropTypes.array.isRequired,
+    onDeleteContact: PropTypes.func.isRequired
+
 }
 
 // class ListContacts extends Component {
