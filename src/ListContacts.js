@@ -33,7 +33,6 @@ function ListContacts(props) {
 ListContacts.protoTypes = {
     contacts: PropTypes.array.isRequired,
     onDeleteContact: PropTypes.func.isRequired
-
 }
 
 // class ListContacts extends Component {
