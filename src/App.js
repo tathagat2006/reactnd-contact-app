@@ -38,22 +38,29 @@ class App extends Component {
 
         contacts: [
             {
-                "id": "karen",
-                "name": "Karen Isgrigg",
-                "handle": "@karen_isgrigg",
-                "avatarURL": "http://localhost:5001/karen.jpg"
+                "id": "sumeet",
+                "name": "Sumeet Malik",
+                "handle": "@jamesbond7",
+                "avatarURL": "http://localhost:5001/sumeet.jpg"
             },
             {
-                "id": "richard",
-                "name": "Richard Kalehoff",
-                "handle": "@richardkalehoff",
-                "avatarURL": "http://localhost:5001/richard.jpg"
+                "id": "arnav",
+                "name": "Arnav Gupta",
+                "handle": "@championswimmer",
+                "avatarURL": "http://localhost:5001/arnav.jpg"
             },
+            // {
+            //     "id": "tyler",
+            //     "name": "Tyler McGinnis",
+            //     "handle": "@tylermcginnis",
+            //     "avatarURL": "http://localhost:5001/tyler.jpg"
+            // },
+
             {
-                "id": "tyler",
-                "name": "Tyler McGinnis",
-                "handle": "@tylermcginnis",
-                "avatarURL": "http://localhost:5001/tyler.jpg"
+                "id": "garvit",
+                "name": "Garvit Khatri",
+                "handle": "@ignitor",
+                "avatarURL": "http://localhost:5001/garvit.jpg"
             },
 
             {
