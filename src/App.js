@@ -36,40 +36,16 @@ class App extends Component {
 
     state = {
 
-        contacts: [
-            {
-                "id": "sumeet",
-                "name": "Sumeet Malik",
-                "handle": "@jamesbond7",
-                "avatarURL": "http://localhost:5001/sumeet.jpg"
-            },
-            {
-                "id": "arnav",
-                "name": "Arnav Gupta",
-                "handle": "@championswimmer",
-                "avatarURL": "http://localhost:5001/arnav.jpg"
-            },
-            // {
-            //     "id": "tyler",
-            //     "name": "Tyler McGinnis",
-            //     "handle": "@tylermcginnis",
-            //     "avatarURL": "http://localhost:5001/tyler.jpg"
-            // },
+        contacts: []
+    }
 
-            {
-                "id": "garvit",
-                "name": "Garvit Khatri",
-                "handle": "@ignitor",
-                "avatarURL": "http://localhost:5001/garvit.jpg"
-            },
-
-            {
-                "id": "tathagat",
-                "name": "Tathagat Thapliyal",
-                "handle": "@tathagat2006",
-                "avatarURL": "http://localhost:5001/tathagat.jpg"
-            }
-        ]
+    componentDidMount() {
+        ContactsAPI.getAll()
+            .then((contacts) => {
+                this.setState(() => ({
+                    contacts
+                }))
+            })
     }
 
    removeContact = (contact) => {
