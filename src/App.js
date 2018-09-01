@@ -39,7 +39,16 @@ class App extends Component {
         contacts: []
     }
 
-    componentDidMount() {
+    // componentDidMount() {
+    //     ContactsAPI.getAll()
+    //         .then((contacts) => {
+    //             this.setState(() => ({
+    //                 contacts
+    //             }))
+    //         })
+    // }
+
+    componentWillMount() {
         ContactsAPI.getAll()
             .then((contacts) => {
                 this.setState(() => ({
