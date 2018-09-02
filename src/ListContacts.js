@@ -2,6 +2,7 @@ import React , {Component} from 'react'
 //you can ignore the above line as you are using the stateless functional component.
 
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
 
 //you can also make function instead of using class's render method
 // function ListContacts(props) {
@@ -54,7 +55,7 @@ class ListContacts extends Component {
     render() {
 
         const { query } = this.state;
-        const { contacts , onDeleteContact, onNavigate } = this.props;
+        const { contacts , onDeleteContact } = this.props;
 
         const showNewContacts = query === '' ? contacts : contacts.filter((c) => (
             c.name.toLowerCase().includes(query.toLowerCase())
@@ -69,7 +70,7 @@ class ListContacts extends Component {
                            type='text' value={query} onChange={(event) => {
                                this.updateQuery(event.target.value)
                     }}/>
-                    <a href='#create' className='add-contact' onClick={onNavigate}></a>
+                    <Link to='/create' className='add-contact'></Link>
                 </div>
                 {showNewContacts.length !== contacts.length && (
                     <div className='showing-contacts'>

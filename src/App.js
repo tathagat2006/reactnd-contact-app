@@ -73,16 +73,20 @@ class App extends Component {
   render() {
     return (
       <div>
-          {this.state.screen === 'list' && (<ListContacts
-            onDeleteContact = {this.removeContact}
-            contacts={this.state.contacts}
-            onNavigate={() => {
-                this.setState(() => ({
-                    screen:'create'
-                }))
-            }}/>)}
+          <Route exact path= '/' render={() => (
+              <ListContacts
+                  onDeleteContact = {this.removeContact}
+                  contacts={this.state.contacts}
+                  onNavigate={() => {
+                      this.setState(() => ({
+                          screen:'create'
+                      }))
+                  }}/>
+          )}/>
+          {/*{this.state.screen === 'list' && ()}*/}
+          <Route path='/create' component={CreateContact}/>
 
-          {this.state.screen === 'create' && (<CreateContact/>)}
+          {/*{this.state.screen === 'create' && (<CreateContact/>)}*/}
       </div>
     )
   }
